@@ -1,0 +1,18 @@
+# read design
+read_verilog counter.sv
+
+# set top level
+hierarchy -check -top counter
+
+# convert always-blocks into internal cells
+proc; opt
+
+# map internal cells to generic gate-level primitive
+techmap; opt
+
+# write result
+write_verilog synth_counter.v
+
+# show stat
+stat
+
