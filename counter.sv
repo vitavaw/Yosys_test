@@ -3,8 +3,8 @@
 module counter #(
 	parameter   COUNTER_WIDTH = 4
 ) (
-	input  wire                      clk_in        , 
-	input  wire                      reset_n_in    , 
+	input  wire                      clk_in      , 
+	input  wire                      rst_n_in    , 
 	output wire [COUNTER_WIDTH-1:0]  counter_out 
 ); 
 
@@ -16,7 +16,7 @@ reg [COUNTER_WIDTH-1:0] counter_reg;
 
 // counter 
 always @(posedge clk_in) begin 
-	if (!reset_n_in) begin 
+	if (!rst_n_in) begin 
 		counter_reg <= 0; 
 	end 
 	else begin
