@@ -1,3 +1,3 @@
 package params_pkg; 
-    parameter int WIDTH = 4;
+    parameter int COUNTER_WIDTH = 4;
 endpackage
