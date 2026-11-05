@@ -3,7 +3,8 @@
 module tb_counter; 
 	
 	//========================= PARAMETERS =======================//
-	parameter COUNTER_WIDTH = 4; 
+	import params_pkg::*; 
+
 	parameter CLK_PERIOD    = 20; 
 
 	//======================= WIRES & REGS =======================//
